@@ -83,6 +83,10 @@ public class ToggleButton extends View {
 	 */
 	private String unSelectText;
 	/**
+	 * 文字颜色
+	 */
+	private int selectTextColor = Color.parseColor("#ffff5555"), unSelectTextColor = Color.parseColor("#ffff5555");
+	/**
 	 * 字体大小
 	 */
 	private float fontSize=0;
@@ -179,6 +183,10 @@ public class ToggleButton extends View {
 				offColor);
 		selectText = typedArray.getString(R.styleable.ToggleButton_selectText);
 		unSelectText = typedArray.getString(R.styleable.ToggleButton_unSelectText);
+		selectTextColor = typedArray.getColor(R.styleable.ToggleButton_selectTextColor,
+				selectTextColor);
+		unSelectTextColor = typedArray.getColor(R.styleable.ToggleButton_unSelectTextColor,
+				unSelectTextColor);
 		borderWidth = typedArray.getDimensionPixelSize(
 				R.styleable.ToggleButton_borderWidth, borderWidth);
 		typedArray.recycle();
@@ -301,7 +309,7 @@ public class ToggleButton extends View {
 		if(selectText != null){
 			mTextPaint.setTextSize((float) (fontSize*0.5));
 			mTextPaint.getTextBounds(selectText, 0, selectText.length(), mTextBound);
-			mTextPaint.setColor(0xffff5555);
+			mTextPaint.setColor(selectTextColor);
 			canvas.drawText(selectText, spotMinX - mTextBound.width()*1/4,
 					(radius + mTextBound.height() / 3), mTextPaint);
 		}
@@ -311,7 +319,7 @@ public class ToggleButton extends View {
 			}
 			mTextPaint.setTextSize((float) (offLineWidth*0.5));
 			mTextPaint.getTextBounds(unSelectText, 0, unSelectText.length(), mTextBound);
-			mTextPaint.setColor(0xffff5555);
+			mTextPaint.setColor(unSelectTextColor);
 			canvas.drawText(unSelectText, spotMaxX - mTextBound.width()*3/4,
 					(radius + mTextBound.height() / 3), mTextPaint);
 		}
@@ -342,9 +350,5 @@ public class ToggleButton extends View {
 
 	public void setOnToggleChanged(OnToggleChanged onToggleChanged) {
 		listener = onToggleChanged;
-	}
-
-	public void setText(String selectText, String unSelectText){
-		
 	}
 }
