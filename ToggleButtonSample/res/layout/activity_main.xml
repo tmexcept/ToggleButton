@@ -60,6 +60,8 @@
     <com.zcw.togglebutton.ToggleButton
         android:layout_width="90dp"
         android:layout_height="40dp"
+        toggle:selectText="开始"
+        toggle:unSelectText="结束"
         android:layout_marginTop="10dp" />
 
 

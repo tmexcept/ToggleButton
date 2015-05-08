@@ -39,10 +39,20 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int onColor=0x7f010003;
         /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+         */
+        public static int selectText=0x7f010005;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
         public static int spotColor=0x7f010004;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+         */
+        public static int unSelectText=0x7f010006;
     }
     public static final class styleable {
         /** Attributes that can be used with a ToggleButton.
@@ -55,17 +65,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #ToggleButton_offBorderColor com.zcw.togglebutton:offBorderColor}</code></td><td></td></tr>
            <tr><td><code>{@link #ToggleButton_offColor com.zcw.togglebutton:offColor}</code></td><td></td></tr>
            <tr><td><code>{@link #ToggleButton_onColor com.zcw.togglebutton:onColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #ToggleButton_selectText com.zcw.togglebutton:selectText}</code></td><td></td></tr>
            <tr><td><code>{@link #ToggleButton_spotColor com.zcw.togglebutton:spotColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #ToggleButton_unSelectText com.zcw.togglebutton:unSelectText}</code></td><td></td></tr>
            </table>
            @see #ToggleButton_borderWidth
            @see #ToggleButton_offBorderColor
            @see #ToggleButton_offColor
            @see #ToggleButton_onColor
+           @see #ToggleButton_selectText
            @see #ToggleButton_spotColor
+           @see #ToggleButton_unSelectText
          */
         public static final int[] ToggleButton = {
             0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
-            0x7f010004
+            0x7f010004, 0x7f010005, 0x7f010006
         };
         /**
           <p>This symbol is the offset where the {@link com.zcw.togglebutton.R.attr#borderWidth}
@@ -82,7 +96,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.zcw.togglebutton:borderWidth
         */
-        public static final int ToggleButton_borderWidth = 0;
+        public static int ToggleButton_borderWidth = 0;
         /**
           <p>This symbol is the offset where the {@link com.zcw.togglebutton.R.attr#offBorderColor}
           attribute's value can be found in the {@link #ToggleButton} array.
@@ -94,7 +108,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           @attr name com.zcw.togglebutton:offBorderColor
         */
-        public static final int ToggleButton_offBorderColor = 1;
+        public static int ToggleButton_offBorderColor = 1;
         /**
           <p>This symbol is the offset where the {@link com.zcw.togglebutton.R.attr#offColor}
           attribute's value can be found in the {@link #ToggleButton} array.
@@ -106,7 +120,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           @attr name com.zcw.togglebutton:offColor
         */
-        public static final int ToggleButton_offColor = 2;
+        public static int ToggleButton_offColor = 2;
         /**
           <p>This symbol is the offset where the {@link com.zcw.togglebutton.R.attr#onColor}
           attribute's value can be found in the {@link #ToggleButton} array.
@@ -118,7 +132,18 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           @attr name com.zcw.togglebutton:onColor
         */
-        public static final int ToggleButton_onColor = 3;
+        public static int ToggleButton_onColor = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.zcw.togglebutton.R.attr#selectText}
+          attribute's value can be found in the {@link #ToggleButton} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+          @attr name com.zcw.togglebutton:selectText
+        */
+        public static int ToggleButton_selectText = 5;
         /**
           <p>This symbol is the offset where the {@link com.zcw.togglebutton.R.attr#spotColor}
           attribute's value can be found in the {@link #ToggleButton} array.
@@ -130,6 +155,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           @attr name com.zcw.togglebutton:spotColor
         */
-        public static final int ToggleButton_spotColor = 4;
+        public static int ToggleButton_spotColor = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.zcw.togglebutton.R.attr#unSelectText}
+          attribute's value can be found in the {@link #ToggleButton} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+          @attr name com.zcw.togglebutton:unSelectText
+        */
+        public static int ToggleButton_unSelectText = 6;
     };
 }

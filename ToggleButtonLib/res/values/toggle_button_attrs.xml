@@ -11,5 +11,9 @@
     	</attr>
     	<attr name="spotColor" format="reference|color">
     	</attr>
+    	<attr name="selectText" format="reference|string">
+    	</attr>
+    	<attr name="unSelectText" format="reference|string">
+    	</attr>
     </declare-styleable>
 </resources>
