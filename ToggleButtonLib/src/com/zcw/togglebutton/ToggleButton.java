@@ -306,6 +306,9 @@ public class ToggleButton extends View {
 					(radius + mTextBound.height() / 3), mTextPaint);
 		}
 		if(unSelectText != null){
+			if(offLineWidth == 0){
+				offLineWidth = spotSize;
+			}
 			mTextPaint.setTextSize((float) (offLineWidth*0.5));
 			mTextPaint.getTextBounds(unSelectText, 0, unSelectText.length(), mTextBound);
 			mTextPaint.setColor(0xffff5555);
